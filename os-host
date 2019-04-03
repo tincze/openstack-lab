@@ -1,0 +1,5 @@
+server_name: app1
+flavor_name: m2.small
+server_group: apps
+deployment: QA 
+security_groups: apps

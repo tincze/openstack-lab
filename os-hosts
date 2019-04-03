@@ -1,0 +1,51 @@
+server_name: app1
+flavor_name: m2.small
+keypair: ansible_ssh
+networks: Public: 10.10.10.0/24 Private: 20.20.20.0/24
+    Image: rhel-guest
+    Ports Open: 8080/tcp, 22/tcp, icmp
+Application 2
+
+    Name: app2
+
+    Metadata: group=apps, deployment_name=QA
+
+    Flavor: m2.small
+
+    Keypair: ansible_ssh
+
+    Networks: Public: 10.10.10.0/24 Private: 20.20.20.0/24
+
+    Image: rhel-guest
+
+    Ports Open: 8080/tcp, 22/tcp, icmp
+
+Database
+
+    Name: db
+
+    Metadata: group=appdbs, deployment_name=QA
+
+    Flavor: m2.small
+
+    Keypair: ansible_ssh
+
+    Networks: Public: 10.10.10.0/24 Private: 20.20.20.0/24
+
+    Image: rhel-guest
+
+    Ports Open: 5432/tcp, 22/tcp, icmp
+
+Front End
+
+    Name: frontend
+
+    Metadata: group=frontends, deployment_name=QA
+
+    Flavor: m2.small
+
+    Keypair: ansible_ssh
+
+    Networks: Public: 10.10.10.0/24 Private: 20.20.20.0/24
+
+    Image: rhel-guest
