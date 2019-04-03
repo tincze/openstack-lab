@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Gather instance facts
+    os_server_facts:
+     cloud: ospcloud
+    register: output
+  - debug: var=output
